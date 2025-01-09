@@ -1,0 +1,38 @@
+a = float(input("Enter the first number: "))
+b = float(input("Enter the second number: "))
+c = float(input("Enter the third number: "))
+
+# Initialize min, mid, and max
+min = mid = max = 0
+
+# Comparing the values to determine the max, mid, and min
+if a > b and a > c:
+    max = a
+    if b > c:
+        mid = b
+        min = c
+    else:
+        mid = c
+        min = b
+elif b > a and b > c:
+    max = b
+    if a > c:
+        mid = a
+        min = c
+    else:
+        mid = c
+        min = a
+elif c > a and c > b:
+    max = c
+    if a > b:
+        mid = a
+        min = b
+    else:
+        mid = b
+        min = a
+else:
+    min = mid = max = a  # If all numbers are equal
+
+# Printing the numbers in descending order
+print("Descending order of", a, b, c, "is:")
+print(max, mid, min, sep=" > ")
