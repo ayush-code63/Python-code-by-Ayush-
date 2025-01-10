@@ -1,0 +1,9 @@
+a=int(input("Enter the first integer="))
+b=int(input("Enter the second integer="))
+c=int(input("Enter the third integer="))
+min=a
+if b<a and b<c:
+ min=b
+if c<a and c<b:
+ min=c
+print("smallest number between given integer is=",min)
