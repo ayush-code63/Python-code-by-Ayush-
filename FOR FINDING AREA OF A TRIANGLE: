@@ -1,0 +1,18 @@
+#Taking input for sides of triangle
+side_1 = float(input("Enter the first side of the triangle: "))
+side_2 = float(input("Enter the second side of the triangle: "))
+side_3 = float(input("Enter the third side of the triangle: "))
+#condition for valid triangle and area of it
+if side_1 + side_2 > side_3 and side_1 + side_3 > side_2 and side_2 + side_3 > side_1:
+  print("✅️The triangle is valid")
+  s = (side_1 + side_2 + side_3) / 2
+  area = (s * (s - side_1) * (s - side_2) * (s - side_3))**0.5
+  if side_1 == side_2 == side_3:
+    print("🔸️The triangle is equilateral")
+  elif side_1 == side_2 or side_2 == side_3 or side_3 == side_1:
+    print("🔸️The triangle is isosceles")
+  else:
+    print("🔸️The triangle is scalene")
+  print("The area of the triangle is: ", int(area))
+else:
+  print("The triangle is not valid")
